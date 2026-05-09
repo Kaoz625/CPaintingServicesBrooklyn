@@ -1,53 +1,35 @@
-# Replit Agent Task Spec — CPaintingServicesBrooklyn
+# NOTE: This repo is being consolidated into CPaintingServices. See Kaoz625/CPaintingServices for canonical spec.
 
-## Instructions for Replit Agent
-You are enhancing this painting services website to be hyperlocal to Brooklyn.
-Commit all changes with prefix "replit: " and push to main when done.
+# Replit Agent Task: CPaintingServices + CPaintingServicesBrooklyn (Consolidation)
 
-## Current State
-Good structure. Currently identical to the NYC-wide version — needs Brooklyn-specific differentiation.
-
-## Stack Rules
-- Static HTML/CSS/JS only
-- Contact form: Formspree (free tier)
-- No Vercel — deploy on Cloudflare Pages
+## Goal
+Consolidate CPaintingServices and CPaintingServicesBrooklyn into a single, clean professional painting contractor website that serves all NYC boroughs, with strong local SEO and a clear quote request flow.
 
 ## Tasks
+1. Merge the best content from both repos into one unified site — CPaintingServices becomes the canonical repo; CPaintingServicesBrooklyn can redirect here
+2. Build a hero section: clean white/navy professional aesthetic, headline "NYC's Trusted Painting Contractors", subline covering all boroughs, and a prominent "Get a Free Quote" CTA
+3. Create a Services section: Interior Painting, Exterior Painting, Commercial Painting, Wallpaper Removal, Color Consultation — each as a card with icon, description, and price range
+4. Build a Portfolio/Gallery section: before/after photo grid (use placeholder images) with project type labels (apartment, brownstone, office, etc.)
+5. Add a Service Area section: list all NYC boroughs served (Manhattan, Brooklyn, Queens, Bronx, Staten Island) with a simple NYC borough map graphic or icon grid
+6. Add Testimonials: 5 realistic reviews from NYC clients with names, boroughs, and star ratings
+7. Build a Quote Request form: name, email, phone, address, service type, square footage, preferred start date — submit to Supabase `quote_requests` table
+8. Add local SEO: borough-specific meta description, JSON-LD for LocalBusiness with serviceArea NYC, canonical URL
+9. Add Open Graph tags and a professional logo/favicon
+10. Ensure full mobile responsiveness
+11. Deploy to Cloudflare Pages
 
-### 1. Brooklyn-Specific Rebrand
-- Page title: "C Painting Services Brooklyn | Local Brooklyn Painters You Can Trust"
-- Hero h1: "Brooklyn's Most Trusted Painters."
-- Hero subheading: "From Park Slope to Bed-Stuy. Crown Heights to Williamsburg. We have painted Brooklyn's homes for years."
+## Tech Stack
+- HTML/CSS/JS (or React if the existing codebase already uses it — match what's there)
+- Supabase (quote request storage)
+- Cloudflare Pages (static deploy)
 
-### 2. Contact Info (Placeholders)
-- Phone: (347) 000-0000
-- Email: brooklyn@cpaintingservices.com
-- Note: "Based in Brooklyn. No travel fees within the borough."
+## Deploy Target
+Cloudflare Pages — connect `Kaoz625/CPaintingServices`. Never Vercel.
 
-### 3. Brooklyn Testimonials Section
-Add between services and why-us:
-1. "Best painters in Bed-Stuy. Quick, clean, affordable. My whole floor looks brand new." — Keisha M., Bed-Stuy
-2. "Used them twice — once for the living room, once for the whole brownstone exterior. Perfect both times." — James B., Park Slope
-3. "My landlord sent them, and even I was impressed. Fixed the water stain, matched the paint perfectly." — Nina T., Crown Heights
-
-### 4. Brooklyn Service Area Section
-Add: "Neighborhoods we serve daily: Park Slope, Bed-Stuy, Crown Heights, Williamsburg, Bushwick, Flatbush, Sunset Park, Bay Ridge, Greenpoint, DUMBO, Carroll Gardens, Cobble Hill, Fort Greene, Clinton Hill, Borough Park, Canarsie, East New York, Bensonhurst"
-
-### 5. FAQ (Brooklyn-flavored)
-- Q: Do you work in brownstones and pre-war buildings? A: Yes, brownstones are our specialty. We handle plaster walls, crown molding, and historic finishes.
-- Q: Can you match existing paint colors? A: Absolutely. Bring us a chip or we can scan it. We work with all major brands.
-- Q: Do you offer weekend appointments? A: Yes. Saturday and Sunday available.
-- Q: How far in advance do I need to book? A: Usually 3-5 business days. Large jobs, 1-2 weeks.
-- Q: Do you do exterior painting? A: Yes. Brownstone facades, stoops, fences, gates, and fire escapes.
-
-### 6. Wire Contact Form to Formspree
-Action: https://formspree.io/f/YOUR_BROOKLYN_FORM_ID
-Success message: "Got it! A Brooklyn-based team member will call you within 24 hours."
-
-### 7. Trust Badge
-In hero section add: "Serving Brooklyn Since 2019 | 500+ Projects Completed"
-
-### 8. SEO Meta Tags
-- title: "C Painting Services Brooklyn | Local Brooklyn Painters"
-- description: "Brooklyn's trusted painting contractors. Interior, exterior, brownstones. Park Slope, Bed-Stuy, Crown Heights and more. Free estimates."
-- keywords: "Brooklyn painters, Park Slope painting, Bed-Stuy painters, brownstone painting Brooklyn"
+## Done When
+- [ ] Services, Portfolio, Testimonials, and Quote sections all built
+- [ ] Quote form submits to Supabase
+- [ ] All 5 NYC boroughs listed in service area
+- [ ] JSON-LD LocalBusiness schema with serviceArea present
+- [ ] Mobile-responsive at 375px
+- [ ] All changes pushed to `Kaoz625/CPaintingServices` main branch
